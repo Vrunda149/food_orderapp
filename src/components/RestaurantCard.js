@@ -1,18 +1,17 @@
-const RestaurantCard = ({ data }) => {
+const RestaurantCard = ({ data, setCartCount }) => {
   return (
-    <div
-      style={{
-        border: "1px solid #ddd",
-        padding: "10px",
-        margin: "10px",
-        width: "200px",
-      }}
-    >
+    <div className="card">
+      <img src={data.image} alt={data.name} />
       <h3>{data.name}</h3>
       <p>{data.cuisine}</p>
       <p>⭐ {data.rating}</p>
+      <button onClick={() => setCartCount((prev) => prev + 1)}>
+        Add to Cart
+      </button>
     </div>
   );
 };
 
 export default RestaurantCard;
+
+

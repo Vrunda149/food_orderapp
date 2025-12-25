@@ -1,9 +1,11 @@
-const Header = () => {
+const Header = ({ cartCount }) => {
   return (
-    <div style={{ padding: "20px", backgroundColor: "#ff6347", color: "white" }}>
-      <h1>🍔 Food Ordering App</h1>
+    <div className="header">
+      <h2>Food App</h2>
+      <h3>Cart: {cartCount}</h3>
     </div>
   );
 };
 
 export default Header;
+
